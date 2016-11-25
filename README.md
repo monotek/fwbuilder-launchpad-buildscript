@@ -12,6 +12,6 @@ https://github.com/fwbuilder/fwbuilder
 
 This scripts helps building a version for Ubuntu.
 
-Prebuild packages cabn be found on Launchpad:
+Prebuild packages can be found on Launchpad:
 
 https://launchpad.net/~monotek/+archive/ubuntu/fwbuilder

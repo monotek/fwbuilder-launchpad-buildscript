@@ -13,7 +13,7 @@ fi
 
 #script
 if [ -z ${OS_VERSION} ]; then
-    echo -e "need os version! \nUsage: $0 trusty"
+    echo -e "need os & package version! \nUsage: $0 trusty 5.3.7"
     exit 1
 fi
 
@@ -35,7 +35,7 @@ REAL_PATH="$(realpath .)"
 
 cd $(find ${REAL_PATH} -maxdepth 1 -mindepth 1 -type d -name "*${PACKAGE}*")/debian
 
-debchange -l ${PACKAGE_IDENTIFIER} ${DEBCOMMENT} -D ${OS_VERSION}
+debchange -D ${OS_VERSION} -v ${PACKAGE_VERSION}-${OS_VERSION}1 ${DEBCOMMENT}
 
 if [ "${LAUNCHPAD_UPLOAD}" == "yes" ]; then
     debuild -S

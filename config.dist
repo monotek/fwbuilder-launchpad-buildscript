@@ -4,7 +4,9 @@
 #
 
 OS_VERSION="$1"
+OS_VERSION_ALL="trusty xenial yakkety"
 PACKAGE="fwbuilder"
+PACKAGE_VERSION="5.3.7"
 PACKAGE_IDENTIFIER="${OS_VERSION}"
 PPA="fwbuilder"
 BUILD_DIR="build"

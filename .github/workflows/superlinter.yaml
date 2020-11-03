@@ -18,3 +18,4 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           VALIDATE_KUBERNETES_KUBEVAL: false
           VALIDATE_YAML: false
+          VALIDATE_ANSIBLE: false

@@ -8,7 +8,8 @@ ARG PACKAGE_VERSION="5.3.7"
 
 WORKDIR /tmp
 
-COPY fwbuilder.sh config.dist /tmp
+COPY config.dist /tmp/
+COPY fwbuilder.sh /tmp/
 
 RUN apt-get update -y;apt-get -y upgrade; \
     apt-get install -y build-essential cdbs cmake devscripts dput libsnmp-dev libxml2-dev libxslt1-dev qtbase5-dev qttools5-dev-tools zlib1g-dev 

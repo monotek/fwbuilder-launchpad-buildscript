@@ -1,8 +1,5 @@
 name: ci
 
-on: 
-  pull_request:
-
 jobs:
   super-linter:
     runs-on: ubuntu-latest
@@ -18,4 +15,3 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           VALIDATE_KUBERNETES_KUBEVAL: false
           VALIDATE_YAML: false
-

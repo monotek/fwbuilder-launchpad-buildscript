@@ -28,8 +28,7 @@ for OS_VERSION in ${OS_VERSIONS}; do
         test -d ${BUILD_DIR} && rm -rf ${BUILD_DIR}
         test -d ${BUILD_DIR} || mkdir -p ${BUILD_DIR}
         cd ${BUILD_DIR}
-        git clone ${FWBUILDER_GIT_REPO}
-        git checkout v${PACKAGE_VERSION}
+        git clone --depth 1 --branch v${PACKAGE_VERSION} ${FWBUILDER_GIT_REPO}
     fi
 
     REAL_PATH="$(realpath .)"

@@ -12,7 +12,7 @@ COPY config.dist /tmp/
 COPY fwbuilder.sh /tmp/
 
 RUN apt-get update -y;apt-get -y upgrade; \
-    apt-get install --no-install-recommends -y build-essential cdbs cmake debhelper devscripts dput git libsnmp-dev libdistro-info-perl libqt4-dev libxml2-dev libxslt1-dev pkg-config qt5-qmake-bin qtbase5-dev qttools5-dev-tools zlib1g-dev 
+    apt-get install --no-install-recommends -y build-essential cdbs cmake debhelper devscripts dput git libsnmp-dev libdistro-info-perl libxml2-dev libxslt1-dev pkg-config qt5-qmake-bin qtbase5-dev qttools5-dev-tools zlib1g-dev 
 
 RUN sed -r -e "s#DEBEMAIL=.*#DEBEMAIL=\"${DEBEMAIL}\"#g" \
     -e "s#DEBFULLNAME=.*#DEBFULLNAME=\"${DEBFULLNAME}\"#g" \

@@ -1,5 +1,8 @@
 name: ci
 
+on: 
+  push:
+
 jobs:
   super-linter:
     runs-on: ubuntu-latest

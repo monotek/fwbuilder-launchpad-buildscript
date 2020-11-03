@@ -3,16 +3,15 @@
 # fwbuilder build config
 #
 
-OS_VERSION="$1"
-OS_VERSION_ALL="trusty xenial yakkety"
+OS_VERSIONS="xenial bionic focal groovy"
 PACKAGE="fwbuilder"
 PACKAGE_VERSION="5.3.7"
 PACKAGE_IDENTIFIER="${OS_VERSION}"
 PPA="fwbuilder"
 BUILD_DIR="build"
 DEBFULLNAME="Your Name"
-DEBEMAIL="you@qmail.com"
+DEBEMAIL="you@email.com"
 DEBCOMMENT="ubuntu ${PACKAGE_IDENTIFIER} build"
 LAUNCHPAD_UPLOAD="no"
-FWBUILDER_GIT_REPO="git@github.com:fwbuilder/fwbuilder.git"
+FWBUILDER_GIT_REPO="https://github.com/fwbuilder/fwbuilder.git"
 PPA_OWNER="ppaownername"

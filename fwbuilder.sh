@@ -42,6 +42,6 @@ for OS_VERSION in ${OS_VERSIONS}; do
 
         dput ppa:"${PPA_OWNER}/${PPA}" $(find "${REAL_PATH}" -name "${PACKAGE}"*_source.changes | sort | tail -n1)
     else
-        debuild --no-tgz-check -us -uc -i -I
+        debuild -d --no-tgz-check -us -uc -i -I
     fi
 done

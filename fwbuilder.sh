@@ -38,10 +38,10 @@ for OS_VERSION in ${OS_VERSIONS}; do
     debchange -D ${OS_VERSION} -v ${PACKAGE_VERSION}-${OS_VERSION}1 ${DEBCOMMENT}
 
     if [ "${LAUNCHPAD_UPLOAD}" == "yes" ]; then
-        debuild -S
+        debuild --no-tgz-check -S
 
         dput ppa:${PPA_OWNER}/${PPA} $(find ${REAL_PATH} -name ${PACKAGE}*_source.changes | sort | tail -n1)
     else
-        debuild -us -uc -i -I
+        debuild --no-tgz-check -us -uc -i -I
     fi
 done

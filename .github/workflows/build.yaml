@@ -25,5 +25,4 @@ jobs:
             DEBEMAIL: "${{ secrets.DEBEMAIL }}"
             DEBFULLNAME: "${{ secrets.DEBFULLNAME}}"
             PPA_OWNER: "${{ secrets.PPA_OWNER }}"
-        run: |
-          docker build .
+        run: docker build .

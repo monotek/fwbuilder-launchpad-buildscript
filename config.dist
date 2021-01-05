@@ -5,7 +5,7 @@
 
 OS_VERSIONS="xenial bionic focal groovy"
 PACKAGE="fwbuilder"
-PACKAGE_VERSION="5.3.7"
+PACKAGE_VERSION="6.0.0-rc1"
 PACKAGE_IDENTIFIER="${OS_VERSION}"
 PPA="fwbuilder"
 BUILD_DIR="build"

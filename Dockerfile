@@ -3,7 +3,6 @@ FROM ubuntu:20.04
 ARG DEBIAN_FRONTEND=noninteractive
 ARG LAUNCHPAD_UPLOAD="no"
 ARG OS_VERSIONS="focal"
-ARG PACKAGE_VERSION="6.0.0-rc1"
 
 WORKDIR /tmp
 
@@ -17,7 +16,6 @@ RUN sed -r -e "s#DEBEMAIL=.*#DEBEMAIL=\"${DEBEMAIL}\"#g" \
     -e "s#DEBFULLNAME=.*#DEBFULLNAME=\"${DEBFULLNAME}\"#g" \
     -e "s#LAUNCHPAD_UPLOAD=.*#LAUNCHPAD_UPLOAD=\"${LAUNCHPAD_UPLOAD}\"#g" \
     -e "s#OS_VERSIONS=.*#OS_VERSIONS=\"${OS_VERSIONS}\"#g" \
-    -e "s#PACKAGE_VERSION=.*#PACKAGE_VERSION=\"${PACKAGE_VERSION}\"#g" \
     -e "s#PPA_OWNER=.*#PPA_OWNER=\"${PPA_OWNER}\"#g" < /tmp/config.dist > /tmp/config
 
 RUN ./fwbuilder.sh

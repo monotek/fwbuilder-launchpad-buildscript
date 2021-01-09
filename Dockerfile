@@ -1,7 +1,6 @@
-FROM ubuntu:focal
+FROM ubuntu:20.04
 
 ARG DEBIAN_FRONTEND=noninteractive
-
 ARG LAUNCHPAD_UPLOAD="no"
 ARG OS_VERSIONS="focal"
 ARG PACKAGE_VERSION="6.0.0-beta"
